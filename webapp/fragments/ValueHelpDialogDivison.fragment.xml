@@ -1,0 +1,13 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+	<SelectDialog
+		id="selectDialogDivison"
+		title="Sales Divison"
+		items="{/divisionSet}"
+		search=".onValueHelpSearchDivison"
+		confirm=".onValueHelpCloseDivison"
+		cancel=".onValueHelpCloseDivison">
+		<StandardListItem
+			title="{Spart}" 
+			description="{Vtext}" />
+	</SelectDialog>
+</core:FragmentDefinition>

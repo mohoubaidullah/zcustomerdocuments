@@ -1,0 +1,13 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+	<SelectDialog
+		id="selectDialogChannel"
+		title="Sales Channel"
+		items="{/channelSet}"
+		search=".onValueHelpSearchChannel"
+		confirm=".onValueHelpCloseChannel"
+		cancel=".onValueHelpCloseChannel">
+		<StandardListItem
+			title="{Vtweg}" 
+			description="{Vtext}" />
+	</SelectDialog>
+</core:FragmentDefinition>

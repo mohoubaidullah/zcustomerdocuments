@@ -1,0 +1,13 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+	<SelectDialog
+		id="selectDialogSoff"
+		title="Cities"
+		items="{/salesofficeSet}"
+		search=".onValueHelpSearchSoff"
+		confirm=".onValueHelpCloseSoff"
+		cancel=".onValueHelpCloseSoff">
+		<StandardListItem
+			title="{Vkbur}" 
+			description="{Bezei}" />
+	</SelectDialog>
+</core:FragmentDefinition>

@@ -1,0 +1,52 @@
+<mvc:View controllerName="customeratt.zsd1.controller.CustomerAtt" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m"
+	xmlns:f="sap.ui.layout.form" xmlns:core="sap.ui.core" xmlns:u="sap.ui.unified">
+	<Shell id="shell">
+		<App id="app">
+			<pages>
+				<Page id="page" title="{i18n>title}">
+					<content>
+						<VBox class="sapUiSmallMargin">
+							<f:SimpleForm id="idCustomerDetails" editable="true" layout="ResponsiveGridLayout" title="General Customer Details" labelSpanXL="3"
+								labelSpanL="3" labelSpanM="3" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="4" emptySpanL="4" emptySpanM="4" emptySpanS="0"
+								columnsXL="1" columnsL="1" columnsM="1" singleContainerFullSize="false">
+								<f:content>
+									<Label text="Customer ID"/>
+									<Input id="idTemp" submit="onSubmit"/>
+									<Label text="Customer Name"/>
+									<Text id="idName" text="{/Zname}"/>
+								</f:content>
+							</f:SimpleForm>
+							<f:SimpleForm id="idCustomerDocuments" editable="true" layout="ResponsiveGridLayout" title="General Customer Details" labelSpanXL="3"
+								labelSpanL="3" labelSpanM="3" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="4" emptySpanL="4" emptySpanM="4" emptySpanS="0"
+								columnsXL="1" columnsL="1" columnsM="1" singleContainerFullSize="false">
+								<f:content>
+									<Label text="VAT"/>
+									<Button id="idfileVatBtn" text ="VAT" type="Accept" press="openVATFile"/>
+									<Button id="idfileVatBtnApprove" text ="Approve"  type="Accept" press="verifiedVATFile"/>
+									<Button id="idfileVatBtnReject" text ="Reject" type="Reject" press="verifiedVATFile"/>
+									<Label text="CR"/>
+									<Button id="idfileCrBtn" text ="CR" type="Accept" press="openCRFile"/>
+									<Button id="idfileCrBtnApprove" text ="Approve" type="Accept" press="verifiedCRFile"/>
+									<Button id="idfileCrBtnReject" text ="Reject" type="Reject" press="verifiedCRFile"/>
+									<Label text="National ID / Iqama"/>
+									<Button id="idfileIDBtn" text ="ID" type="Accept" press="openIDFile"/>
+									<Button id="idfileIDBtnApprove" text ="Approve" type="Accept" press="verifiedIDFile"/>
+									<Button id="idfileIDBtnReject" text ="Reject" type="Reject"  press="verifiedIDFile"/>
+									<Label text="Shop License"/>
+									<Button id="idfileSlBtn" text ="Shop License" type="Accept" press="openLicenseFile"/>
+									<Button id="idfileSlBtnApprove" text ="Approve" type="Accept" press="verifiedSlFile"/>
+									<Button id="idfileSlBtnReject" text ="Reject" type="Reject" press="verifiedSlFile"/>
+									<Label text="Comments"/>
+									<TextArea id="idTextArea" value="{/value}" showExceededText="true" maxLength="100" width="100%" 
+									valueState="{= ${/value}.length > 100 ? 'Warning' : 'None' }" valueLiveUpdate="false" liveChange="handleLiveChange" />
+									<Label />
+									<Button id="idComments" text ="Save Comments"  press="onSaveComments" width="150px"/>
+								</f:content>
+							</f:SimpleForm>
+						</VBox>
+					</content>
+				</Page>
+			</pages>
+		</App>
+	</Shell>
+</mvc:View>
