@@ -30,3 +30,13 @@ server:
       configuration:
         component: customeratt.zsd1
         ui5Theme: sap_fiori_3
+    - name: sap-fe-mockserver
+      beforeMiddleware: csp
+      configuration:
+        mountPath: /
+        services:
+          - urlPath: /sap/opu/odata/sap/ZSD_DOCUMENTS_SRV
+            metadataPath: ./webapp/localService/metadata.xml
+            mockdataPath: ./webapp/localService/ZSD_DOCUMENTS_SRV/data
+            generateMockData: true
+        annotations: []
